@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Login</title>
+    <link rel="stylesheet" href="css/adminstyle.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="glass-box">
+            <h2>User Login</h2>    
+
+            <%=(typeof alertMsg!='undefined')? alertMsg:''%>
+
+            <form method="post" action="/login">
+                <div class="input-box">
+                    <input type="email" placeholder="Email Address" name="email_address" required />
+                    <i class="far fa-envelope"></i>
+                </div>
+
+                <div class="input-box">
+                    <input id="pswrd" type="password" placeholder="Password" name="password" required />
+                    <i class="fas fa-lock" onclick="togglePassword()"></i>
+                </div>
+
+                <input type="submit" value="Login">
+            </form>    
+
+            <p class="text-center">New here? <a href="/register">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var pswrd = document.getElementById('pswrd');
+            var icon = document.querySelector('.fa-lock');
+            if (pswrd.type === "password") {
+                pswrd.type = "text";
+                icon.style.color = "#046b99";
+            } else {
+                pswrd.type = "password";
+                icon.style.color = "grey";
+            }
+        }
+    </script>
+
+</body>
+</html>

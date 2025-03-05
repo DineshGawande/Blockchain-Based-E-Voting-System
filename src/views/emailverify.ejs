@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>OTP Verification</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/adminstyle.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="glass-box">
+            <h2>OTP Verification</h2>
+            <p>We have sent a verification code to your email.</p>
+
+            <form method="post" action="/otpverify">
+                <div class="input-box">
+                    <input type="text" placeholder="Enter OTP" name="otp" required />
+                    <i class="fas fa-key"></i>
+                </div>
+
+                <input type="submit" value="Verify OTP">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
